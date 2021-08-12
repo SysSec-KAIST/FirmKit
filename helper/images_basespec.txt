@@ -1,0 +1,18 @@
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model A/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model B/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model C/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model D/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model E/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model F/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model G/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model H/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_latest/Model I/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model A (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model B (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model C (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model D (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model E (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model F (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model G (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model H (Old)/modem_unpacked.bin
+/home/dongkwan/binkit-dataset/baseband/firmware_oldest/Model I (Old)/modem_unpacked.bin

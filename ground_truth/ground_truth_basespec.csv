@@ -1,0 +1,19 @@
+﻿Number,Brand,Name,Arch,IP,Ping,Web,Vuln,Similar Image,Comment,B9,E8,B6,B7
+Model A,,May_2020,armel,,,,,,,",0x4113ed5a",",0x4168317e",",0x4074667c",
+Model B,,May_2020,armel,,,,,,,",0x4117e646",",0x4166bd5a",",0x4067a12c",
+Model C,,May_2020,armel,,,,,,,",0x4114ca72",",0x4163a112",",0x40652ddc",
+Model D,,Jun_2020,armel,,,,,,,",0x40e3f5aa",",0x40ae5cba",",0x4076d9cc",
+Model E,,Jun_2020,armel,,,,,,,",0x40e3ffca",",0x40ae621e",",0x4076df30",
+Model F,,Apr_2020,armel,,,,,,,",0x412b6022",",0x414d40b6",",0x409a6330",
+Model G,,Apr_2020,armel,,,,,,,",0x41226da6",",0x41444e3a",",0x40918898",
+Model H,,Apr_2020,armel,,,,,,,",0x4105bbe0",",0x4100e1b0",,
+Model I,,Apr_2020,armel,,,,,,,",0x4100b0b4",",0x40fb7f30",,
+Model A (Old),,Apr_2019,armel,,,,,,,",0x411c03aa",",0x40cca9c8",",0x407c689c",
+Model B (Old),,Feb_2019,armel,,,,,,,",0x4127b8ca",",0x41092e70",",0x406d3158",
+Model C (Old),,Feb_2019,armel,,,,,,,",0x4124810e",",0x4105f6b4",",0x406a4bb4",
+Model D (Old),,Mar_2018,armel,,,,,,,",0x40b469be",",0x413d6aac",",0x40771a10",",0x413d4c04"
+Model E (Old),,Mar_2018,armel,,,,,,,",0x40b473b6",",0x413d74a4",",0x40772408",",0x413d55fc"
+Model F (Old),,Apr_2017,armel,,,,,,,",0x41324ae6",",0x414ff498",",0x40921d54",",0x414Fdc64"
+Model G (Old),,Apr_2017,armel,,,,,,,",0x41296ede",",0x4147574c",",0x408a4c84",",0x41473f18"
+Model H (Old),,Apr_2016,armel,,,,,,,",0x410704e8",",0x41059242",,",0x41057be2"
+Model I (Old),,Apr_2016,armel,,,,,,,",0x41019c00",",0x41002bc6",,",0x41001566"

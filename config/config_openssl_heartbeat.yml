@@ -1,0 +1,181 @@
+# output directory where the output data will be stored
+# if not given, use the config file name as the output directory.
+outdir:
+
+# Use pre-trained features by gnu dataset
+# %s part is architecture pair (e.g., arm_x86, arm_arm)
+pre_trained: "/home/dongkwan/tiknib/results/config_firmae_gcc_%s/"
+
+result_suffix: "_heartbeat_results"
+
+# features
+# select from training
+features:
+  - cfg_size
+  - cfg_avg_degree
+  - cfg_num_degree
+  - cfg_avg_loopintersize
+  - cfg_avg_loopsize
+  - cfg_avg_sccsize
+  - cfg_num_backedges
+  - cfg_num_loops
+  - cfg_num_loops_inter
+  - cfg_num_scc
+  - cfg_sum_loopintersize
+  - cfg_sum_loopsize
+  - cfg_sum_sccsize
+  - cg_num_callees
+  - cg_num_callers
+  - cg_num_imported_callees
+  - cg_num_incalls
+  - cg_num_outcalls
+  - cg_num_imported_calls
+  - inst_avg_abs_dtransfer
+  - inst_avg_abs_arith
+  - inst_avg_abs_ctransfer
+    # dtransfer + misc
+  - inst_num_abs_dtransfer
+    # arith + shift
+  - inst_num_abs_arith
+    # ctransfer + cond ctransfer
+  - inst_num_abs_ctransfer
+  - inst_avg_total
+  - inst_avg_floatinst
+  - inst_avg_logic
+  - inst_avg_dtransfer
+  - inst_avg_arith
+  - inst_avg_cmp
+  - inst_avg_shift
+  - inst_avg_bitflag
+  - inst_avg_cndctransfer
+  - inst_avg_ctransfer
+  - inst_avg_misc
+  - inst_num_total
+  - inst_num_floatinst
+  - inst_num_logic
+  - inst_num_dtransfer
+  - inst_num_arith
+  - inst_num_cmp
+  - inst_num_shift
+  - inst_num_bitflag
+  - inst_num_cndctransfer
+  - inst_num_ctransfer
+  - inst_num_misc
+#  - data_num_consts
+#  - data_avg_consts
+#  - data_sum_consts_seq
+#  - data_num_strings
+#  - data_sum_strlen
+#  - data_avg_strlen
+#  - data_sum_strlen_seq
+#  - data_sum_abs_strings
+#  - data_avg_abs_strings
+#  - data_sum_abs_strings_seq
+
+# Put function name or start address
+target_funcs:
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_32_O0_libssl.so.elf":
+    - 0x3a430 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_32_O1_libssl.so.elf":
+    - 0x2bdc4 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_32_O2_libssl.so.elf":
+    - 0x2aa30 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_32_O3_libssl.so.elf":
+    - 0x2b8d4 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_64_O0_libssl.so.elf":
+    - 0x3edf8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_64_O1_libssl.so.elf":
+    - 0x31ab8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_64_O2_libssl.so.elf":
+    - 0x315cc # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_arm_64_O3_libssl.so.elf":
+    - 0x32938 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_32_O0_libssl.so.elf":
+    - 0x40320 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_32_O1_libssl.so.elf":
+    - 0x2f8a8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_32_O2_libssl.so.elf":
+    - 0x2b404 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_32_O3_libssl.so.elf":
+    - 0x2c234 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_64_O0_libssl.so.elf":
+    - 0x48a5c # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_64_O1_libssl.so.elf":
+    - 0x343a4 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_64_O2_libssl.so.elf":
+    - 0x33ad8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mips_64_O3_libssl.so.elf":
+    - 0x34cc0 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_32_O0_libssl.so.elf":
+    - 0x366a5 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_32_O1_libssl.so.elf":
+    - 0x2b325 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_32_O2_libssl.so.elf":
+    - 0x2c390 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_32_O3_libssl.so.elf":
+    - 0x2d240 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_64_O0_libssl.so.elf":
+    - 0x3f75b # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_64_O1_libssl.so.elf":
+    - 0x3389e # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_64_O2_libssl.so.elf":
+    - 0x34a70 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_x86_64_O3_libssl.so.elf":
+    - 0x35e00 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_32_O0_libssl.so.elf":
+    - 0x3a078 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_32_O1_libssl.so.elf":
+    - 0x2bd60 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_32_O2_libssl.so.elf":
+    - 0x2a0d4 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_32_O3_libssl.so.elf":
+    - 0x2b254 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_64_O0_libssl.so.elf":
+    - 0x3f7e8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_64_O1_libssl.so.elf":
+    - 0x31a2c # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_64_O2_libssl.so.elf":
+    - 0x30f60 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_arm_64_O3_libssl.so.elf":
+    - 0x322d0 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_32_O0_libssl.so.elf":
+    - 0x40720 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_32_O1_libssl.so.elf":
+    - 0x2f968 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_32_O2_libssl.so.elf":
+    - 0x2bbdc # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_32_O3_libssl.so.elf":
+    - 0x2ccb0 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_64_O0_libssl.so.elf":
+    - 0x490ec # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_64_O1_libssl.so.elf":
+    - 0x343a4 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_64_O2_libssl.so.elf":
+    - 0x32c60 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mips_64_O3_libssl.so.elf":
+    - 0x33ef8 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_32_O0_libssl.so.elf":
+    - 0x36b82 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_32_O1_libssl.so.elf":
+    - 0x2b43a # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_32_O2_libssl.so.elf":
+    - 0x2c450 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_32_O3_libssl.so.elf":
+    - 0x2d380 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_64_O0_libssl.so.elf":
+    - 0x3f86d # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_64_O1_libssl.so.elf":
+    - 0x338ed # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_64_O2_libssl.so.elf":
+    - 0x34990 # tls1_process_heartbeat
+  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_x86_64_O3_libssl.so.elf":
+    - 0x35ed0 # tls1_process_heartbeat
+
+#  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mipseb_32_O2_libssl.so.elf":
+#    - 0x2b404
+#  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-4.9.4_mipseb_32_O3_libssl.so.elf":
+#    - 0x2c234
+#  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mipseb_32_O2_libssl.so.elf":
+#    - 0x2bba0
+#  "/home/dongkwan/lastwork/openssl_dataset/openssl-OpenSSL_1_0_1f_gcc-5.5.0_mipseb_32_O3_libssl.so.elf":
+#    - 0x2cc74

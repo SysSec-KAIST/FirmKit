@@ -1,0 +1,122 @@
+# output directory where the output data will be stored
+# if not given, use the config file name as the output directory.
+outdir:
+
+# Use pre-trained features by gnu dataset
+# %s part is architecture pair (e.g., arm_x86, arm_arm)
+pre_trained: "/home/dongkwan/tiknib/results/config_firmae_gcc_%s/"
+
+result_suffix: "_firmae_gcc_results"
+
+# features
+# select from training
+features:
+  - cfg_size
+  - cfg_avg_degree
+  - cfg_num_degree
+  - cfg_avg_loopintersize
+  - cfg_avg_loopsize
+  - cfg_avg_sccsize
+  - cfg_num_backedges
+  - cfg_num_loops
+  - cfg_num_loops_inter
+  - cfg_num_scc
+  - cfg_sum_loopintersize
+  - cfg_sum_loopsize
+  - cfg_sum_sccsize
+  - cg_num_callees
+  - cg_num_callers
+  - cg_num_imported_callees
+  - cg_num_incalls
+  - cg_num_outcalls
+  - cg_num_imported_calls
+  - inst_avg_abs_dtransfer
+  - inst_avg_abs_arith
+  - inst_avg_abs_ctransfer
+    # dtransfer + misc
+  - inst_num_abs_dtransfer
+    # arith + shift
+  - inst_num_abs_arith
+    # ctransfer + cond ctransfer
+  - inst_num_abs_ctransfer
+  - inst_avg_total
+  - inst_avg_floatinst
+  - inst_avg_logic
+  - inst_avg_dtransfer
+  - inst_avg_arith
+  - inst_avg_cmp
+  - inst_avg_shift
+  - inst_avg_bitflag
+  - inst_avg_cndctransfer
+  - inst_avg_ctransfer
+  - inst_avg_misc
+  - inst_num_total
+  - inst_num_floatinst
+  - inst_num_logic
+  - inst_num_dtransfer
+  - inst_num_arith
+  - inst_num_cmp
+  - inst_num_shift
+  - inst_num_bitflag
+  - inst_num_cndctransfer
+  - inst_num_ctransfer
+  - inst_num_misc
+#  - data_num_consts
+#  - data_avg_consts
+#  - data_sum_consts_seq
+#  - data_num_strings
+#  - data_sum_strlen
+#  - data_avg_strlen
+#  - data_sum_strlen_seq
+#  - data_sum_abs_strings
+#  - data_avg_abs_strings
+#  - data_sum_abs_strings_seq
+
+# Put function name or start address
+target_funcs:
+  # Belows are command injection
+  "/home/dongkwan/lastwork/firmkit/test/2/cgibin":
+    - 0x40afb0 # CVE-2020-15893, no CVE
+    - 0x4057a4 # CVE-2019-20213
+#    - 0x40f12c # CVE-2015-2051
+  "/home/dongkwan/lastwork/firmkit/test/619/cgibin":
+    - 0x18cd0  # CVE-2015-2051
+  "/home/dongkwan/lastwork/firmkit/test/804/alphapd":
+    - 0x423c6c # CVE-2016-11021
+  "/home/dongkwan/lastwork/firmkit/test/53/httpd":
+    - 0x46e578 # no cve
+  "/home/dongkwan/lastwork/firmkit/test/186/httpd":
+    - 0x41f6a4 # CVE-2017-6077
+  "/home/dongkwan/lastwork/firmkit/test/104/httpd":
+    - 0x369e8  # CVE-2016-6277
+
+  # Belows are info leak
+  "/home/dongkwan/lastwork/firmkit/test/37/httpd":
+    - 0x409840 # CVE-2012-2765
+#  "/home/dongkwan/lastwork/firmkit/test/524/httpd":
+#    - 0x417f70 # CVE-2012-2765 <- different kind of function but same vuln
+  "/home/dongkwan/lastwork/firmkit/test/118/httpd":
+    - 0x405034 # CVE-2017-7240
+  "/home/dongkwan/lastwork/firmkit/test/99/httpd":
+    - 0x2a908  # CVE-2017-5521
+    - 0x163dc  # CVE-2017-5521-2
+  "/home/dongkwan/lastwork/firmkit/test/510/webproc":
+    - 0x401d90 # CVE-2014-2962
+
+  # Belows are BOF 0-days
+  "/home/dongkwan/lastwork/firmkit/test/653/udhcpd":
+    - 0x403de4 # CVE-2019-6258 # This should be confirmed in IDA Pro
+  "/home/dongkwan/lastwork/firmkit/test/939/libleopard.so":
+    - 0x105a4  # CVE-2019-11400
+  "/home/dongkwan/lastwork/firmkit/test/979/setup.cgi":
+    - 0x230a0  # CVE-2020-5516
+  "/home/dongkwan/lastwork/firmkit/test/896/rc":
+    - 0x419034 # CVE-2019-20082
+    - 0x41eb54 # CVE-2019-20082 two
+  "/home/dongkwan/lastwork/firmkit/test/41/httpd":
+    - 0x445c04 # no cve
+
+  # Belows are command injection 0-days
+  "/home/dongkwan/lastwork/firmkit/test/939/ncc":
+    - 0x463270 # CVE-2019-11399
+    - 0x4639e8 # CVE-2019-11399 two
