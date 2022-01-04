@@ -1,27 +1,27 @@
 # Description
-FirmKit is a IoT vulnerability analysis tool based on binary code similarity
-analysis (BCSA). FirmKit includes ground truth vulnerabilities in custom
+FirmKit is an IoT vulnerability analysis tool based on binary code similarity
+analysis (BCSA). FirmKit includes **ground truth vulnerabilities** in custom
 binaries, such as CGI binaries, for the top eight wireless router and IP camera
 vendors.
 
 Currently, the FirmKit utilizes
 [TikNib](https://github.com/SoftSec-KAIST/TikNib), which is a simple
 interpretable BCSA tool. In addition to TikNib's numeric presemantic features,
-In addition, FirmKit implements two additional features based on heuristic
-knowledge. Through empirical analysis of diverse binaries in our previous
-studies, we discovered that IoT binaries frequently contain function names.
-Thus, rather than comparing abstracted numeric features, we can directly compare
-caller and callee names. For example, we can use the names of internal and
-library functions instead of the numbers of callers and callees. Additionally,
-we discovered that data strings contained in IoT binaries often contain useful
-information. CGI binaries include hard-coded strings for parsing URLs, such as
-HTTP, POST, answer, or password. Therefore, we can use these strings to compute
-the similarity score. Therefore, we chose to use 1) the strings to which the
-function refers and 2) the names of the callee functions.
+FirmKit implements two additional features based on heuristic knowledge. Through
+empirical analysis of diverse binaries in our previous studies, we discovered
+that IoT binaries frequently contain function names. Thus, rather than comparing
+abstracted numeric features, we can directly compare caller and callee names.
+For example, we can use the names of internal and library functions instead of
+the numbers of callers and callees.
+Additionally, we discovered that data strings contained in IoT binaries often
+contain useful information. CGI binaries include hard-coded strings for parsing
+URLs, such as HTTP, POST, answer, or password. Therefore, we can use these
+strings to compute the similarity score. Therefore, we chose to use 1) the
+strings to which the function refers and 2) the names of the callee functions.
 
-Firmkit computes the string similarity between two heuristic features using a
-Jaccard index. Then, the similarity scores of these two heuritic features are
-averaged with the score obtained by numeric presemantic features.
+Firmkit computes the string similarity score between two heuristic features
+using a Jaccard index. Then, the similarity scores of these two heuritic
+features are averaged with the score obtained by numeric presemantic features.
 
 For more details, please check [my thesis
 paper](https://0xdkay.me/pub/2022/kim-phdthesis2022.pdf) (Chapter 6).
