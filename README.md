@@ -209,12 +209,14 @@ We would appreciate if you consider citing the previous papers,
   address = {Online}
 }
 
-@article{kim:2020:binkit,
-  author = {Dongkwan Kim and Eunsoo Kim and Sang Kil Cha and Sooel Son and Yongdae Kim},
-  title = {Revisiting Binary Code Similarity Analysis using Interpretable Feature Engineering and Lessons Learned},
-  eprint={2011.10749},
-  archivePrefix={arXiv},
-  primaryClass={cs.SE}
-  year = {2020},
+@article{kim:2022:binkit,
+  author={Kim, Dongkwan and Kim, Eunsoo and Cha, Sang Kil and Son, Sooel and Kim, Yongdae},
+  journal={IEEE Transactions on Software Engineering (TSE)}, 
+  title={Revisiting Binary Code Similarity Analysis using Interpretable Feature Engineering and Lessons Learned}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-23},
+  doi={10.1109/TSE.2022.3187689}
 }
 ```
